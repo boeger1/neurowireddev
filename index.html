@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>neurowireddev</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-<body>
-    <div class="pov">
-        <div class="tray">
-            <div class="die">
-                <div class="cube">
-                    <div class="face" style="font-size:60px">NEURO</div>
-                    <div class="face" style="font-size:58px">WIRED</div>
-                    <div class="face" style="font-size:55px">DEV</div>      
-                </div>
-            </div>  
-        </div>
-    </div>
 
-    <script src="script.js"></script> 
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Matias Bøger</div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#me">Who Am i</a></li>
+                <li><a href="#about me">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <section id="me">
+        <div class="bg-effect bg-effect-1"></div>
+        <div class="profile-container">
+            <img src="img/ME.jpg" alt="Profile Picture" class="profile-img">
+            <div class="contact-info">
+                <p>Email: Matias_boeger@hotmail.com</p>
+                <p>Phone: +4553658044</p>
+                <p>Location: Denmark</p>
+            </div>
+        </div>
+        <div class="section-content">
+            <h1 class="section-title">Who Am i</h1>
+            <p class="section-description">Hallo my name is Matias Bøger Im a computer scientist i finished my education in january 2025</p>
+        </div>
+    </section>
+
+    <section id="about me">
+        <div class="bg-effect bg-effect-2"></div>
+        <div class="section-content">
+            <h1 class="section-title">About Me</h1>
+            <p class="section-description">
+                I am a newly graduated computer scientist with a strong passion for software development and technological solutions that make a difference. 
+                Through my education at Zealand Academy of Technologies and Business, I have built strong skills in programming, system development, and business understanding. 
+                I have worked with technologies such as C#, C++, JavaScript, React, HTML, CSS, and database systems.
+                I thrive in a dynamic development environment where collaboration, knowledge sharing, and continuous improvement are key.
+                I have a structured and analytical approach to development and am committed to writing clean and maintainable code. 
+                Additionally, I have a keen interest in automation and system optimization, where I can contribute to improving processes and creating efficient digital solutions.
+                I am seeking new challenges in software development where I can apply my skills and continue to learn. If you have an exciting opportunity, feel free to get in touch!</p>
+        </div>
+    </section>
+
 </body>
+
 </html>
