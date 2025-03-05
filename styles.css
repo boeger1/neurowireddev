@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Segoe UI',sans-serif;
 }
 
 :root {
@@ -19,8 +19,6 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 1.2rem 5%;
     backdrop-filter: blur(12px);
@@ -40,7 +38,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
     margin: 0 auto;
 }
 
