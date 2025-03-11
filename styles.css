@@ -234,12 +234,10 @@ section:nth-child(even) {
     color: white;
 }
 
-.section-description {
-    font-size: 1.8rem;
-}
+
 
 .profile-container {
-    text-align: left;
+    text-align: center;
 }
 
 .profile-img {
@@ -252,6 +250,42 @@ section:nth-child(even) {
     margin-top: 15px;
     font-size: 16px;
     color: #f6f6f6;
+    text-align: center;
+}
+
+.work-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.work-img {
+    width: 300px;
+    height: auto;
+    border-radius: 1px;
+    object-fit: cover;
+}
+
+.work-img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.work-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: white;
+}
+.work-description {
+    font-size: 1rem;
+    max-width: fit-content;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+    opacity: 0.9;
+    color: #ccc;
     text-align: center;
 }
 
