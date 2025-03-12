@@ -13,25 +13,27 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">Matias Bøger</div>
-            <ul class="nav-links">
+            <div class="burger-menu" id="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#WhoAmI">Who Am i</a></li>
                 <li><a href="#Profession">Profession</a></li>
                 <li><a href="#MyWork">MyWork</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="overlay"></div>
-
-    <div class="section-container"></div>
-            <div class="profile-container">
-                <img src="img/ME.jpg" alt="Profile Picture" class="profile-img">
-                <div class="contact-info">
-                    <p>Email: Matias_boeger@hotmail.com</p>
-                    <p>Phone: +4553658044</p>
-                    <p>Location: Denmark</p>
-                </div>
+    <div class="section-container">
+        <div class="profile-container">
+            <img src="img/ME.jpg" alt="Profile Picture" class="profile-img">
+        </div>
     </div>
+
+    <div class="overlay" id="overlay"></div>
 
     <section id="WhoAmI">
         <div class="bg-effect bg-effect-1"></div>
@@ -104,6 +106,36 @@
             </div>
         </div>
     </section>
+
+    <footer id="Contact">
+        <div class="contact-info">
+            <p>Email: Matias_boeger@hotmail.com</p>
+            <p>Phone: +4553658044</p>
+        </div>
+    </footer>
+
+    <script>
+        const burgerMenu = document.getElementById('burger-menu');
+        const navLinks = document.getElementById('nav-links');
+        const overlay = document.getElementById('overlay');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

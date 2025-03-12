@@ -10,3 +10,14 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+
+// Add functionality to handle responsive behavior if needed.
+mobileNavToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+});

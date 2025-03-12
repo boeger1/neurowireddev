@@ -105,6 +105,19 @@ body {
     animation: gradient 8s linear infinite;
 }
 
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }
@@ -113,6 +126,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -151,6 +168,11 @@ body {
         opacity: 0;
         transform: translateX(20px);
         transition: all 0.4s ease;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .overlay {
@@ -244,12 +266,13 @@ section:nth-child(even) {
 
 .profile-container {
     text-align: center;
+    margin-top: 100px;
 }
 
 .profile-img {
-    width: 300px; 
+    width: 400px;
     height: auto;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .contact-info {
@@ -293,5 +316,80 @@ section:nth-child(even) {
     opacity: 0.9;
     color: #ccc;
     text-align: center;
+}
+
+footer {
+    background: var(--glass-bg);
+    padding: 20px;
+    text-align: center;
+    border-top: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #f6f6f6;
+}
+
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 4rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 300px;
+    }
+
+    .work-img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    .profile-img {
+        width: 200px;
+    }
+
+    .work-img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 0.8rem;
+    }
+
+    .profile-img {
+        width: 150px;
+    }
+
+    .work-img {
+        width: 150px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
 }
 
