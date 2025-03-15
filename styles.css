@@ -296,6 +296,18 @@ a {
     .work-img {
         width: 200px;
     }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -321,6 +333,19 @@ a {
 
     .nav-links {
         gap: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .contact-info {
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .fa-linkedin {
+        font-size: 18px;
     }
 }
 
