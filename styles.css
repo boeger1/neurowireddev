@@ -195,13 +195,11 @@ body {
 }
 
 .section-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    gap: 3rem;
-    padding: 50px;
+   background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 section {
@@ -256,13 +254,7 @@ section:nth-child(even) {
     color: white;
 }
 
-.content-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-}
+
 
 .profile-container {
     text-align: center;
