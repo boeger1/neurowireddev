@@ -8,21 +8,15 @@
     </head>
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">Matias Bøger</div>
-            <div class="burger-menu" id="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Who Am i</a></li>
-                <li><a href="profession.html">Profession</a></li>
-                <li><a href="mywork.html">MyWork</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
+
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
 
     <section id="Profession">
 
@@ -46,13 +40,14 @@
 
     </section>
 
-    <footer id="Contact">
-        <div class="contact-info">
-            <p>Email: Matias_boeger@hotmail.com</p>
-            <p>Phone: +4553658044</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/matias-b%C3%B8ger-51642124b/" target="_blank"><i class="fa-brands fa-linkedin"></i> My LinkedIn</a></p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            });
+    </script>
 
     <script>
         const burgerMenu = document.getElementById('burger-menu');

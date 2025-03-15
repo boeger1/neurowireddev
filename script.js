@@ -11,7 +11,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add functionality to handle responsive behavior if needed.
 mobileNavToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     overlay.classList.toggle('active');
