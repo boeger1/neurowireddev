@@ -17,20 +17,6 @@ body {
     min-height: 100vh;
 }
 
-.burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.burger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -126,6 +112,20 @@ body {
 .nav-links a:hover::after {
     width: 100%;
     animation: gradient 8s linear infinite;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
 
@@ -309,6 +309,10 @@ a {
         flex-direction: column;
         gap: 20px;
         font-size: 14px;
+    }
+
+    .burger-menu {
+        display: flex;
     }
 }
 

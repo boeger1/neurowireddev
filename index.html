@@ -50,27 +50,26 @@
     </script>
 
     <script>
-        const burgerMenu = document.getElementById('burger-menu');
-        const navLinks = document.getElementById('nav-links');
-        const overlay = document.getElementById('overlay');
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+                const burgerMenu = document.getElementById('burger-menu');
+                const navLinks = document.getElementById('nav-links');
+                const overlay = document.getElementById('overlay');
 
-        burgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
-        });
+                burgerMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
 
-        overlay.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                overlay.classList.remove('active');
+                overlay.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
             });
-        });
     </script>
+
 
 </body>
 </html>
