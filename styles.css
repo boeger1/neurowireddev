@@ -233,6 +233,7 @@ section:nth-child(even) {
 
 
 /* Footer */
+
 footer {
     display: flex;
     justify-content: center;
