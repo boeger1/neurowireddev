@@ -6,15 +6,15 @@
 }
 
 :root {
-    --gradient: linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --border: 1px solid rgba(255, 255, 255, 0.1);
-    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --gradient: linear-gradient(45deg, #4a90e2, #7b4397);
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --border: 1px solid rgba(255, 255, 255, 0.15);
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 body {
-    background: #0a0a0a;
-    min-height: 100vh;
+    background: #1a1a2e;
+    color: #f0f0f0;
 }
 
 .logo {
@@ -24,16 +24,13 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 8s linear infinite;
-    background-size: 300%;
-    letter-spacing: -0.5px;
+    animation: gradient 4s linear infinite;
 }
 
 .profile-img {
     width: 400px;
     height: auto;
-    border-radius: 50%;
-    block-size: 600px;
+    border-radius: 20%;
     margin: 40px;
 }
 
@@ -52,7 +49,7 @@ body {
 
 .navbar.scrolled {
     padding: 0.8rem 5%;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(26, 26, 46, 0.9);
 }
 
 .navbar-container {
@@ -131,7 +128,8 @@ body {
 
 /* Sections */
 .section-container {
-   background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -219,7 +217,7 @@ section:nth-child(even) {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 10px 0;
-    color: white;
+    color: #eaeaea;
 }
 .work-description {
     font-size: 1rem;
@@ -227,13 +225,12 @@ section:nth-child(even) {
     margin: 0 auto 20px;
     line-height: 1.5;
     opacity: 0.9;
-    color: #ccc;
+    color: #d1d1d1;
     text-align: center;
 }
 
 
 /* Footer */
-
 footer {
     display: flex;
     justify-content: center;
@@ -242,26 +239,16 @@ footer {
     background: var(--glass-bg);
     border-top: var(--border);
     box-shadow: var(--shadow);
+    background: rgba(26, 26, 46, 0.9);
     flex-wrap: wrap;
 }
 
 .contact-info {
     display: flex;
-    gap: 60px;
+    gap: 40px;
     font-size: 16px;
     color: #f6f6f6;
     align-items: center;
-}
-
-.fa-linkedin {
-    color: #0A66C2;
-    font-size: 20px;
-    margin-right: 5px;
-}
-
-a {
-    color: #0A66C2;
-    text-decoration: none;
 }
 
 /* Responsive */
