@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>neurowireddev</title>
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <section id="FreeTime">
+        <div class="section-container">
+            <h1 class="section-title">What I Like to Do in My Free Time</h1>
+            <p class="section-description">
+                <center>Here are some photos showcasing my favorite activities during my free time</center>
+            </p>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="img/boys.jpg" alt="Photo 1 description">
+                </div>
+                <div class="photo-item">        
+                    <img src="img/discboys.jpg" alt="Photo 2 description">
+                </div>      
+                <div class="photo-item">
+                    <img src="img/disc.jpg" alt="Photo 3 description">
+                </div>
+                <div class="photo-item">
+                    <img src="img/disc.jpg" alt="Photo 3 description">
+                </div>
+                <div class="photo-item">
+                    <img src="img/disc.jpg" alt="Photo 3 description">
+                </div>
+                <div class="photo-item">
+                    <img src="img/disc.jpg" alt="Photo 3 description">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            });
+    </script>
+
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+                const burgerMenu = document.getElementById('burger-menu');
+                const navLinks = document.getElementById('nav-links');
+                const overlay = document.getElementById('overlay');
+
+                burgerMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
+
+                overlay.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+    </script>
+
+
+</body>
+</html>
